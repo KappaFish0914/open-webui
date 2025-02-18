@@ -1,3 +1,34 @@
+# 启动
+## 安装node依赖
+```bash
+node -v v22.10.0
+npm -v 8.12.2
+
+npm install
+```
+## 安装python依赖(windows)
+
+```bash
+cd ./backend
+# 下载pip脚本(如果没有pip)
+curl https://bootstrap.pypa.io/get-pip.py
+# pip版本升级(如果需要)
+python -m pip install --user --upgrade pip
+# 用国内镜像下载依赖
+python -m pip install --user -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
+
+```
+# 用 windows powershell 启动
+- 在backend目录下，按住键盘 *Shift*, 点击右键，选择 *在此处打开 Powershell 窗口(S)*
+- 执行在 powershell窗口中执行 start_windows.bat
+
+## 启动python脚本
+
+```bash
+cd ./backend
+# 如果是windows环境
+./start_windows.bat
+```
 # Open WebUI 👋
 
 ![GitHub stars](https://img.shields.io/github/stars/open-webui/open-webui?style=social)
