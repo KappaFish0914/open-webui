@@ -30,6 +30,15 @@ export default defineConfig({
 			]
 		})
 	],
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://0.0.0.0:8080',
+        changeOrigin: true,
+        rewrite: (path) => path.replace(/^\/api/, '/api')
+      }
+    }
+  },
 	define: {
 		APP_VERSION: JSON.stringify(process.env.npm_package_version),
 		APP_BUILD_HASH: JSON.stringify(process.env.APP_BUILD_HASH || 'dev-build')
